@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import Image from "next/image";
+import '@fontsource/dm-mono';
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`font-dm-mono antialiased`}
       >
         {children}
+        <footer>
+          <a href="https://github.com/ElMalditoEmi" target="_blank" rel="noopener noreferrer">
+            <Image src="/assets/github_logo/github-mark.svg" alt="GitHub Logo" width={30} height={30} />
+          </a>
+        </footer>
       </body>
     </html>
   );
