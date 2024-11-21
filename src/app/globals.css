@@ -81,7 +81,7 @@ body {
   @apply antialiased;
 }
 
-footer {
+.footer {
   color: var(--mocha-base);
   background: var(--mocha-blue);
   padding: 10pt;

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import '@fontsource/dm-mono';
 import "./globals.css";
+import Footer from "@/components/Footer";
+
 
 export const metadata: Metadata = {
   title: "ElMalditoEmi",
@@ -20,11 +21,7 @@ export default function RootLayout({
         className={`font-dm-mono antialiased`}
       >
         {children}
-        <footer>
-          <a href="https://github.com/ElMalditoEmi" target="_blank" rel="noopener noreferrer">
-            <Image src="/assets/github_logo/github-mark.svg" alt="GitHub Logo" width={30} height={30} />
-          </a>
-        </footer>
+      <Footer />
       </body>
     </html>
   );
