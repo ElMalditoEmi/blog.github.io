@@ -4,7 +4,9 @@ import Image from "next/image";
 const Footer: React.FC = () => {
   return (
     <div className="footer p-4 w-full fixed bottom-0 flex flex-col items-center">
-      <Image src="/assets/github_logo/github-mark.svg" alt="ElMalditoEmi's logo" width={30} height={30} />
+      <a href="https://github.com/ElMalditoEmi" target="_blank" rel="noopener noreferrer">
+        <Image src="/github-logo.svg" alt="GitHub Logo" width={24} height={24} />
+      </a>
       <p className='pt-2'>&copy; {new Date().getFullYear()} ElMalditoEmi. All rights reserved.</p>
     </div>
   );
